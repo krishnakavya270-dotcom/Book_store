@@ -4,6 +4,8 @@ import Footer from '../../Components/Footer'
 import { IoCheckmarkCircleSharp } from 'react-icons/io5'
 import Edit from '../Components/Edit'
 import UploadBooks from '../Components/UploadBooks'
+import UploadStatus from '../Components/UploadStatus'
+import PurchaseHistory from '../Components/PurchaseHistory'
 
 function Profile() {
   const [currentTab,setCurrentTab] = useState(1)
@@ -31,8 +33,8 @@ function Profile() {
         <p onClick={()=>setCurrentTab(3)} className={currentTab==3 ?'p-4 border-gray-300 border-l border-t border-r cursor-pointer rounded-xl':'p-4 border-gray-300 border-b cursor-pointer rounded'}>Purchase History</p>
       </div>
       {currentTab==1 && <div><UploadBooks/></div>}
-      {currentTab==2 && <div>upload book status</div>}
-      {currentTab==3 && <div>purchase history</div>}
+      {currentTab==2 && <div><UploadStatus/></div>}
+      {currentTab==3 && <div><PurchaseHistory/></div>}
       <Footer />
     </>
   )
